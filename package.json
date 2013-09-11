@@ -1,0 +1,23 @@
+{
+  "name": "constantcontact",
+  "version": "0.0.0",
+  "description": "Wrapper for Constant Contact API v2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "constant",
+    "contact",
+    "email",
+    "lists",
+    "api",
+    "wrapper"
+  ],
+  "author": "Tim Atkinson",
+  "license": "BSD",
+  "dependencies": {
+    "request": "~2.27.0"
+  }
+}
