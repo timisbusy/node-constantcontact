@@ -12,8 +12,10 @@ This API wrapper is very incomplete at the moment. I will continue to fill it ou
 
 ## use
 
-    var client = require('constantcontact');
+    var Client = require('constantcontact');
 
+    var client = new Client();
+    
     client.useKey("MY_API_KEY");
     client.useToken("MY_ACCESS_TOKEN");
     client.campaigns.get(function (err, res) {
