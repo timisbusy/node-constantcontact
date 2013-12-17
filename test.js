@@ -1,6 +1,7 @@
-var client = require('./index')
+var Client = new require('./index')
   , conf = require('./conf');
 
+var client = new Client();
 client.useKey(conf.apiKey);
 client.useToken(conf.testToken);
 
