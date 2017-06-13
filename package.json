@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": { 
-    "type" : "git"
-    , "url" : "http://github.com/timisbusy/node-constantcontact.git"
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/timisbusy/node-constantcontact.git"
   },
   "keywords": [
     "constant",
@@ -21,6 +21,6 @@
   "author": "Tim Atkinson",
   "license": "BSD",
   "dependencies": {
-    "request": "~2.27.0"
+    "request": "^2.81.0"
   }
 }
