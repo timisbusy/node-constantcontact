@@ -1,0 +1,400 @@
+{
+  "account": {
+    "get": {
+      "method": "GET",
+      "url": "account/info"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "account/info"
+    },
+    "userPrivileges": {
+      "method": "GET",
+      "url": "account/user/privileges"
+    }
+  },
+  "contacts": {
+    "find": {
+      "method": "GET",
+      "url": "contacts"
+    },
+    "create": {
+      "method": "POST",
+      "url": "contacts"
+    },
+    "get": {
+      "method": "GET",
+      "url": "contacts/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "contacts/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "contacts/:id"
+    }
+  },
+  "contacts.tracking": {
+    "summary": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/reports/summary"
+    },
+    "summaryByCampaign": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/reports/summaryByCampaign"
+    },
+    "activity": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/activity"
+    },
+    "bounces": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/bounces"
+    },
+    "clicks": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/clicks"
+    },
+    "forwards": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/forwards"
+    },
+    "opens": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/opens"
+    },
+    "sends": {
+      "method": "GET",
+      "url": "contacts/:id/tracking/sends"
+    }
+  },
+  "lists": {
+    "find": {
+      "method": "GET",
+      "url": "lists"
+    },
+    "create": {
+      "method": "POST",
+      "url": "lists"
+    },
+    "get": {
+      "method": "GET",
+      "url": "lists/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "lists/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "lists/:id"
+    }
+  },
+  "lists.contacts": {
+    "find": {
+      "method": "GET",
+      "url": "lists/:id/contacts"
+    }
+  },
+  "campaigns": {
+    "find": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns"
+    },
+    "create": {
+      "method": "POST",
+      "url": "emailmarketing/campaigns"
+    },
+    "get": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "emailmarketing/campaigns/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "emailmarketing/campaigns/:id"
+    },
+    "test": {
+      "method": "POST",
+      "url": "emailmarketing/campaigns/:id/tests"
+    },
+    "preview": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/preview"
+    }
+  },
+  "campaigns.schedule": {
+    "find": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:campaignId/schedules"
+    },
+    "create": {
+      "method": "POST",
+      "url": "emailmarketing/campaigns/:campaignId/schedules"
+    },
+    "get": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:campaignId/schedules/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "emailmarketing/campaigns/:campaignId/schedules/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "emailmarketing/campaigns/:campaignId/schedules/:id"
+    }
+  },
+  "campaigns.tracking": {
+    "summary": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/tracking/summary"
+    },
+    "unsubscribes": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/tracking/unsubscribes"
+    },
+    "bounces": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/tracking/bounces"
+    },
+    "clicks": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/tracking/clicks/:linkId"
+    },
+    "forwards": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/tracking/forwards"
+    },
+    "opens": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/tracking/opens"
+    },
+    "sends": {
+      "method": "GET",
+      "url": "emailmarketing/campaigns/:id/tracking/sends"
+    }
+  },
+  "events": {
+    "find": {
+      "method": "GET",
+      "url": "eventspot/events"
+    },
+    "create": {
+      "method": "POST",
+      "url": "eventspot/events"
+    },
+    "get": {
+      "method": "GET",
+      "url": "eventspot/events/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "eventspot/events/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "eventspot/events/:id"
+    }
+  },
+  "events.fees": {
+    "find": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/fees"
+    },
+    "create": {
+      "method": "POST",
+      "url": "eventspot/events/:eventId/fees"
+    },
+    "get": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/fees/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "eventspot/events/:eventId/fees/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "eventspot/events/:eventId/fees/:id"
+    }
+  },
+  "events.promocodes": {
+    "find": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/promocodes"
+    },
+    "create": {
+      "method": "POST",
+      "url": "eventspot/events/:eventId/promocodes"
+    },
+    "get": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/promocodes/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "eventspot/events/:eventId/promocodes/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "eventspot/events/:eventId/promocodes/:id"
+    }
+  },
+  "events.items": {
+    "find": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/items"
+    },
+    "create": {
+      "method": "POST",
+      "url": "eventspot/events/:eventId/items"
+    },
+    "get": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/items/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "eventspot/events/:eventId/items/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "eventspot/events/:eventId/items/:id"
+    }
+  },
+  "events.items.attributes": {
+    "find": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/items/:itemId/attributes"
+    },
+    "create": {
+      "method": "POST",
+      "url": "eventspot/events/:eventId/items/:itemId/attributes"
+    },
+    "get": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/items/:itemId/attributes/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "eventspot/events/:eventId/items/:itemId/attributes/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "eventspot/events/:eventId/items/:itemId/attributes/:id"
+    }
+  },
+  "events.registrants": {
+    "find": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/registrants"
+    },
+    "create": {
+      "method": "POST",
+      "url": "eventspot/events/:eventId/registrants"
+    },
+    "get": {
+      "method": "GET",
+      "url": "eventspot/events/:eventId/registrants/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "eventspot/events/:eventId/registrants/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "eventspot/events/:eventId/registrants/:id"
+    }
+  },
+  "library": {
+    "find": {
+      "method": "GET",
+      "url": "library/info"
+    }
+  },
+  "library.folders": {
+    "find": {
+      "method": "GET",
+      "url": "library/folders"
+    },
+    "create": {
+      "method": "POST",
+      "url": "library/folders"
+    },
+    "get": {
+      "method": "GET",
+      "url": "library/folders/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "library/folders/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "library/folders/:id"
+    },
+    "files": {
+      "method": "GET",
+      "url": "library/folders/:id/files"
+    },
+    "moveFile": {
+      "method": "PUT",
+      "url": "library/folders/:id/files"
+    }
+  },
+  "library.files": {
+    "find": {
+      "method": "GET",
+      "url": "library/files"
+    },
+    "get": {
+      "method": "GET",
+      "url": "library/files/:id"
+    },
+    "save": {
+      "method": "PUT",
+      "url": "library/files/:id"
+    },
+    "delete": {
+      "method": "DELETE",
+      "url": "library/files/:id"
+    },
+    "uploadStatus": {
+      "method": "GET",
+      "url": "library/files/uploadstatus/:id"
+    }
+  },
+  "bulk.activities": {
+    "find": {
+      "method": "GET",
+      "url": "activities"
+    },
+    "get": {
+      "method": "GET",
+      "url": "activities/:id"
+    }
+  },
+  "bulk.lists": {
+    "importContacts": {
+      "method": "POST",
+      "url": "activities/addcontacts"
+    },
+    "exportContacts": {
+      "method": "POST",
+      "url": "activities/exportcontacts"
+    },
+    "removeContacts": {
+      "method": "POST",
+      "url": "activities/removefromlists"
+    },
+    "clear": {
+      "method": "POST",
+      "url": "activities/clearlists"
+    }
+  }
+}

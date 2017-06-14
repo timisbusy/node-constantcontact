@@ -1,62 +1,101 @@
 # node-constantcontact
 
-node.js API wrapper for Constant Contact v2 API
-
-## WARNING!
-
-This API wrapper is very incomplete at the moment. I will continue to fill it out and improve the docs over the next couple of weeks. Let me know if there's something you're itching for in the meantime.
+node.js API wrapper for Constant Contact API v2
 
 ## Install
 
-    npm install constantcontact
+```
+$ npm install constantcontact --save
+```
 
-## Use
+## Usage
 
 ### Setup
 
-    var Client = require('constantcontact');
+```javascript
+const ConstantContact = require('constantcontact');
 
-    var client = new Client();
-    
-    client.useKey("MY_API_KEY");
-    client.useToken("MY_ACCESS_TOKEN");
-    
+const cc = new ConstantContact({
+  apiKey: '',
+  accessToken: ''
+});
+```
+  
 ### Get list of email campaigns
-This collection method returns a list of email campaigns.
+    
+```javascript
+let req = cc.campaigns.find({ email: 'some.person@some-domain.com' });
 
-    client.campaigns.get(function (err, res) {
-      if (err) { throw err; }
-      console.log(res);
-    });
-    constantContactClient.contacts.get, {"email": info.email}
-    
-    
+req
+  .catch((err) => {})
+  .then((result) => {});
+```
+
 ### Search for existing contact
-Method for retrieving a list of contacts.
 
-    var email = "test@example.org";
-    client.contacts.get({"email": email}, function (err, res) {
-        if (err) { throw err; }
-        console.log(res);
-    });
+```javascript
+let req = cc.contacts.find({ email: 'test@example.org' });
 
+req
+  .catch((err) => {})
+  .then((result) => {});
+```
 
 ### Add new contact
-Method for adding a Contact to a collection. See full structure of contact object: http://developer.constantcontact.com/docs/contacts-api/contacts-resource.html?method=PUT
 
-    client.contacts.post(contact, true, function (err, res) {
-        if (err) { throw err; }
-        console.log(res);
-    });
+```
+let contacts = [
+  // array of contact objects - see
+  // https://developer.constantcontact.com/docs/contacts-api/contacts-collection.html?method=POST
+];
+
+let req = cc.contacts.create(contacts, { action_by: 'ACTION_BY_OWNER' });
+
+req
+  .catch((err) => {})
+  .then((result) => {});
+```
 
 ### Update existing contact
-Modify a particular contact.
 
-    client.contacts.put(contact, true, function (err, res) {
-        if (err) { throw err; }
-        console.log(res);
-    });
+```javascript
+let req = cc.contacts.save(contact, { action_by: 'ACTION_BY_OWNER '});
 
+req
+  .catch((err) => {})
+  .then((result) => {});
+```
+
+## Advanced Usage
+
+### cc.client
+
+Returns the internal instance of [purest](https://npmjs.com/package/purest) configured for Constant Contact.
+
+```javascript
+let req = cc.client.get('activities').qs({ status: 'ERROR' }).request();
+
+req
+  .catch((err) => {})
+  .then((result) => {});
+```
+
+### cc.paginate(requestPromise, onPageLoad, onError, onEnd)
+
+Follows the pagination links in a request to load each page sequentially.
+
+```javascript
+cc.paginate(
+  cc.contacts.find(),
+  (page) => {},
+  (err) => {},
+  () => {}
+);
+```
+
+### cc.bulkWait(id, interval)
+
+Waits for a bulk operation to complete.
 
 ## Constant Contact API documentation
 
